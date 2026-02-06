@@ -39,4 +39,27 @@ Add this line (example):
 <p><strong>Deployed by:</strong> DMI Cohort 2 | Rahul Sharma | Group 4 | Week 1 | 16-01-2026</p>
 ```
 
+Footer Requirement Readme:
+
+1. Requirement to have dynamic date in the format for DD Mon YYYY. It's required to implement a script Js to call in the html using span tag.
+2. Script how it's used.
+
+<div class="footer-bottom">
+		<p>Pravin Mishra Portfolio v1.0 - Deployed on <span id="deployDate"></span> - By <span>MOHANA KRISHNA DHARANI KUMAR</span></p>
+      </div>
+
+<script>
+    //document.getElementById("deployDate").textContent = new Date().toLocaleDateString('default'); //it'll print in DD/MM/YYYY
+	
+	document.getElementById("deployDate").textContent =
+		new Date().toLocaleDateString("en-GB", {
+		 day: "2-digit",
+		 month: "short",
+         year: "numeric"
+    });
+
+  </script>
+  
+
+
 ✅ This proof must be visible in your browser screenshot submission.
