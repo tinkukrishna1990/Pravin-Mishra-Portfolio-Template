@@ -601,11 +601,23 @@
 
       <!-- Bottom -->
       <div class="footer-bottom">
-		<p>Pravin Mishra Portfolio v1.0 - Deployed on 06 Feb 2026 - By <span>MOHANA KRISHNA DHARANI KUMAR</span></p>
+		<p>Pravin Mishra Portfolio v1.0 - Deployed on <span id="deployDate"></span> - By <span>MOHANA KRISHNA DHARANI KUMAR</span></p>
       </div>
 
     </div>
   </footer>
+  
+  <script>
+    //document.getElementById("deployDate").textContent = new Date().toLocaleDateString('default'); //it'll print in DD/MM/YYYY
+	
+	document.getElementById("deployDate").textContent =
+		new Date().toLocaleDateString("en-GB", {
+		 day: "2-digit",
+		 month: "short",
+         year: "numeric"
+    });
+
+  </script>
 
 
 
